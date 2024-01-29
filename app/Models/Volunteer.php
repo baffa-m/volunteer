@@ -6,6 +6,7 @@ use App\Models\Organization;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Volunteer extends Model
 {
@@ -16,11 +17,15 @@ class Volunteer extends Model
         'description',
         'location',
         'post_openings',
-        'category'
+        'category_id'
     ];
 
 
     public function organizations():BelongsTo {
         return $this->belongsTo(Organization::class, 'organization_id');
+    }
+
+    public function category():HasOne {
+        return $this->hasOne(Category::class);
     }
 }
