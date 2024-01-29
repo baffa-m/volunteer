@@ -13,10 +13,10 @@ class Organization extends Model
     protected $fillable = [
         'email',
         'password',
-        'org_name',
+        'company_name',
         'about',
         'address',
-        'state_id',
+        'state',
     ];
 
 
