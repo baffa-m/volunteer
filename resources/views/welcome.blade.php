@@ -25,65 +25,58 @@
         <div class="row justify-content-center">
             <div class="col-xl-11 col-12 text-center mt-sm-0 pt-sm-0">
                 <div class="text-center features-absolute">
-                    <ul class="nav nav-pills bg-light shadow border-bottom flex-column flex-sm-row d-md-inline-flex nav-justified mb-0 rounded-top position-relative overflow-hidden" id="pills-tab" role="tablist">
-
-                        <li class="nav-item m-1">
-                            <a class="nav-link py-2 px-5 rounded" id="sold-login" data-bs-toggle="pill" href="#sold" role="tab" aria-controls="sold" aria-selected="false">
-                                <div class="text-center">
-                                    <h6 class="mb-0">Search</h6>
-                                </div>
-                            </a><!--end nav link-->
-                        </li><!--end nav item-->
-
-                    </ul>
+                    
 
                     <div class="tab-content bg-white rounded-bottom shadow" id="pills-tabContent">
                         <div class="card border-0 tab-pane fade show active" id="buy" role="tabpanel" aria-labelledby="buy-login">
-                            <form class="card-body text-start">
-                                <div class="row">
-                                    <div class="col-lg-3 col-md-6 col-12">
-                                        <div class="mb-3">
-                                            <label class="form-label">Search :</label>
-                                            <div class="form-icon position-relative">
-                                                <i data-feather="search" class="fea icon-sm icons"></i>
-                                                <input name="name" id="name" type="text" class="form-control ps-5" placeholder="Search your home :">
-                                            </div>
+                            <form class="card rounded p-4 mt-4">
+                                <div class="row text-start">
+                                    <div class="col-lg-5 col-md-4">
+                                        <div class="mb-0">
+                                            <input type="text" class="form-control" required="" placeholder="Keywords">
                                         </div>
                                     </div><!--end col-->
 
-                                    <div class="col-lg-3 col-md-6 col-12">
-                                        <div class="mb-3">
-                                            <label class="form-label">Select Categories:</label>
-                                            <select class="form-control form-select" id="buy-properties">
-                                                <option>Houses</option>
-                                                <option>Apartment</option>
-                                                <option>Offices</option>
-                                                <option>Townhome</option>
-                                            </select>
-                                        </div>
-                                    </div><!--end col-->
+                                    <div class="col-lg-7 col-md-8">
+                                        <div class="row align-items-center">
+                                            <div class="col-md-4 mt-4 mt-sm-0">
+                                                <div class="mb-0">
+                                                    <select class="form-control form-select">
+                                                        <option selected="">Location</option>
+                                                        <option value="AF">Afghanistan</option>
+                                                        <option value="AX">Åland Islands</option>
+                                                        <option value="AL">Albania</option>
+                                                        <option value="DZ">Algeria</option>
+                                                        <option value="AS">American Samoa</option>
+                                                        <option value="AD">Andorra</option>
+                                                        <option value="AO">Angola</option>
+                                                        <option value="AI">Anguilla</option>
+                                                        <option value="AQ">Antarctica</option>
+                                                    </select>
+                                                </div>
+                                            </div><!--end col-->
 
-                                    <div class="col-lg-3 col-md-6 col-12">
-                                        <div class="mb-3">
-                                            <label class="form-label">State</label>
-                                            <select class="form-control form-select" id="buy-max-price">
-                                                <option>Max Price</option>
-                                                <option>500</option>
-                                                <option>1000</option>
-                                                <option>2000</option>
-                                                <option>3000</option>
-                                                <option>4000</option>
-                                                <option>5000</option>
-                                                <option>6000</option>
-                                            </select>
-                                        </div>
-                                    </div><!--end col-->
-                                    <br>
-                                    <div class="col-lg-3 col-md-6 col-12">
-                                        <a href="javascript:void(0)" class="btn btn-primary w-100">Search now</a>
-                                    </div><!--end col-->
+                                            <div class="col-md-4 mt-4 mt-sm-0">
+                                                <div class="mb-0">
+                                                    <select class="form-control form-select">
+                                                        <option selected="">Job Types</option>
+                                                        <option value="4">Accounting</option>
+                                                        <option value="1">IT &amp; Software</option>
+                                                        <option value="3">Marketing</option>
+                                                        <option value="5">Banking</option>
+                                                    </select>
+                                                </div>
+                                            </div><!--end col-->
+
+                                            <div class="col-md-4 mt-4 mt-sm-0">
+                                                <div class="d-grid">
+                                                    <input type="submit" id="search" name="search" class="searchbtn btn btn-primary" value="Search">
+                                                </div>
+                                            </div><!--end col-->
+                                        </div><!--end row-->
+                                    </div> <!---end col-->
                                 </div><!--end row-->
-                            </form><!--end form-->
+                            </form>
                         </div><!--end teb pane-->
 
                     </div><!--end tab content-->
@@ -96,9 +89,7 @@
         <div class="row justify-content-center">
             <div class="col-12">
                 <div class="section-title mb-4 pb-2 text-center">
-                    <span class="badge rounded-pill bg-soft-primary">Featured Items</span>
                     <h4 class="title mt-3 mb-4">Latest Listings</h4>
-                    <p class="text-muted para-desc mb-0 mx-auto">Start working with <span class="text-primary fw-bold">Landrick</span> that can provide everything you need to generate awareness, drive traffic, connect.</p>
                 </div>
             </div><!--end col-->
         </div><!--end row-->
@@ -162,98 +153,7 @@
     </div><!--end container-->
 
 
-    <div class="container mt-100 mt-60">
-        <div class="row justify-content-center">
-            <div class="col-12">
-                <div class="section-title mb-4 pb-2 text-center">
-                    <h4 class="title mb-4">Our Experts</h4>
-                    <p class="text-muted para-desc mb-0 mx-auto">Start working with <span class="text-primary fw-bold">Landrick</span> that can provide everything you need to generate awareness, drive traffic, connect.</p>
-                </div>
-            </div><!--end col-->
-        </div><!--end row-->
 
-        <div class="row">
-            <div class="col-lg-3 col-md-6 mt-4 pt-2">
-                <div class="card team team-primary bg-light text-center rounded shadow border-0">
-                    <div class="card-body">
-                        <div class="position-relative">
-                            <img src="assets/images/client/01.jpg" class="img-fluid avatar avatar-ex-large rounded-circle shadow" alt="">
-                            <ul class="list-unstyled mb-0 team-icon">
-                                <li class="list-inline-item"><a href="javascript:void(0)" class="btn btn-primary btn-pills btn-sm btn-icon"><i data-feather="facebook" class="icons"></i></a></li>
-                                <li class="list-inline-item"><a href="javascript:void(0)" class="btn btn-primary btn-pills btn-sm btn-icon"><i data-feather="instagram" class="icons"></i></a></li>
-                                <li class="list-inline-item"><a href="javascript:void(0)" class="btn btn-primary btn-pills btn-sm btn-icon"><i data-feather="twitter" class="icons"></i></a></li>
-                                <li class="list-inline-item"><a href="javascript:void(0)" class="btn btn-primary btn-pills btn-sm btn-icon"><i data-feather="linkedin" class="icons"></i></a></li>
-                            </ul><!--end icon-->
-                        </div>
-                        <div class="content pt-3">
-                            <h5 class="mb-0"><a href="javascript:void(0)" class="name text-dark">Ronny Jofra</a></h5>
-                            <small class="designation text-muted">Commercial Broker</small>
-                        </div>
-                    </div>
-                </div>
-            </div><!--end col-->
-
-            <div class="col-lg-3 col-md-6 mt-4 pt-2">
-                <div class="card team team-primary bg-light text-center rounded shadow border-0">
-                    <div class="card-body">
-                        <div class="position-relative">
-                            <img src="assets/images/client/04.jpg" class="img-fluid avatar avatar-ex-large rounded-circle shadow" alt="">
-                            <ul class="list-unstyled mb-0 team-icon">
-                                <li class="list-inline-item"><a href="javascript:void(0)" class="btn btn-primary btn-pills btn-sm btn-icon"><i data-feather="facebook" class="icons"></i></a></li>
-                                <li class="list-inline-item"><a href="javascript:void(0)" class="btn btn-primary btn-pills btn-sm btn-icon"><i data-feather="instagram" class="icons"></i></a></li>
-                                <li class="list-inline-item"><a href="javascript:void(0)" class="btn btn-primary btn-pills btn-sm btn-icon"><i data-feather="twitter" class="icons"></i></a></li>
-                                <li class="list-inline-item"><a href="javascript:void(0)" class="btn btn-primary btn-pills btn-sm btn-icon"><i data-feather="linkedin" class="icons"></i></a></li>
-                            </ul><!--end icon-->
-                        </div>
-                        <div class="content pt-3">
-                            <h5 class="mb-0"><a href="javascript:void(0)" class="name text-dark">Micheal Carlo</a></h5>
-                            <small class="designation text-muted">Commercial Broker</small>
-                        </div>
-                    </div>
-                </div>
-            </div><!--end col-->
-
-            <div class="col-lg-3 col-md-6 mt-4 pt-2">
-                <div class="card team team-primary bg-light text-center rounded shadow border-0">
-                    <div class="card-body">
-                        <div class="position-relative">
-                            <img src="assets/images/client/03.jpg" class="img-fluid avatar avatar-ex-large rounded-circle shadow" alt="">
-                            <ul class="list-unstyled mb-0 team-icon">
-                                <li class="list-inline-item"><a href="javascript:void(0)" class="btn btn-primary btn-pills btn-sm btn-icon"><i data-feather="facebook" class="icons"></i></a></li>
-                                <li class="list-inline-item"><a href="javascript:void(0)" class="btn btn-primary btn-pills btn-sm btn-icon"><i data-feather="instagram" class="icons"></i></a></li>
-                                <li class="list-inline-item"><a href="javascript:void(0)" class="btn btn-primary btn-pills btn-sm btn-icon"><i data-feather="twitter" class="icons"></i></a></li>
-                                <li class="list-inline-item"><a href="javascript:void(0)" class="btn btn-primary btn-pills btn-sm btn-icon"><i data-feather="linkedin" class="icons"></i></a></li>
-                            </ul><!--end icon-->
-                        </div>
-                        <div class="content pt-3">
-                            <h5 class="mb-0"><a href="javascript:void(0)" class="name text-dark">Aliana Rosy</a></h5>
-                            <small class="designation text-muted">Commercial Broker</small>
-                        </div>
-                    </div>
-                </div>
-            </div><!--end col-->
-
-            <div class="col-lg-3 col-md-6 mt-4 pt-2">
-                <div class="card team team-primary bg-light text-center rounded shadow border-0">
-                    <div class="card-body">
-                        <div class="position-relative">
-                            <img src="assets/images/client/02.jpg" class="img-fluid avatar avatar-ex-large rounded-circle shadow" alt="">
-                            <ul class="list-unstyled mb-0 team-icon">
-                                <li class="list-inline-item"><a href="javascript:void(0)" class="btn btn-primary btn-pills btn-sm btn-icon"><i data-feather="facebook" class="icons"></i></a></li>
-                                <li class="list-inline-item"><a href="javascript:void(0)" class="btn btn-primary btn-pills btn-sm btn-icon"><i data-feather="instagram" class="icons"></i></a></li>
-                                <li class="list-inline-item"><a href="javascript:void(0)" class="btn btn-primary btn-pills btn-sm btn-icon"><i data-feather="twitter" class="icons"></i></a></li>
-                                <li class="list-inline-item"><a href="javascript:void(0)" class="btn btn-primary btn-pills btn-sm btn-icon"><i data-feather="linkedin" class="icons"></i></a></li>
-                            </ul><!--end icon-->
-                        </div>
-                        <div class="content pt-3">
-                            <h5 class="mb-0"><a href="javascript:void(0)" class="name text-dark">Sofia Razaq</a></h5>
-                            <small class="designation text-muted">Commercial Broker</small>
-                        </div>
-                    </div>
-                </div>
-            </div><!--end col-->
-        </div><!--end row-->
-    </div><!--end container-->
 </section><!--end section-->
 <!-- End -->
 
