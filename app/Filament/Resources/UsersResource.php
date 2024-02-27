@@ -2,20 +2,25 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\UsersResource\Pages;
-use App\Filament\Resources\UsersResource\RelationManagers;
-use App\Models\Users;
 use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
+use App\Models\User;
 use Filament\Tables;
+use App\Models\Users;
+use Filament\Forms\Form;
 use Filament\Tables\Table;
+use Filament\Resources\Resource;
+use Illuminate\Support\Facades\Hash;
+use Filament\Forms\Components\TextInput;
 use Illuminate\Database\Eloquent\Builder;
+use App\Filament\Resources\UsersResource\Pages;
+use App\Filament\Resources\UsersResource\Pages\CreateUsers;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Resources\UsersResource\RelationManagers;
+use Filament\Tables\Columns\TextColumn;
 
 class UsersResource extends Resource
 {
-    protected static ?string $model = Users::class;
+    protected static ?string $model = User::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -23,7 +28,12 @@ class UsersResource extends Resource
     {
         return $form
             ->schema([
-                //
+                TextInput::make('name')->required(),
+                TextInput::make('email')->required(),
+                TextInput::make('password')->required()
+                ->password()
+                ->dehydrateStateUsing(fn ($state) => Hash::make($state))
+                ->visible(fn ($livewire) => $livewire instanceof CreateUsers),
             ]);
     }
 
@@ -31,7 +41,8 @@ class UsersResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('name'),
+                TextColumn::make('email'),
             ])
             ->filters([
                 //

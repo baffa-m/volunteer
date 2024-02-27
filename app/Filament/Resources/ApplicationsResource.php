@@ -2,20 +2,21 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\ApplicationsResource\Pages;
-use App\Filament\Resources\ApplicationsResource\RelationManagers;
-use App\Models\Applications;
 use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Forms\Form;
 use Filament\Tables\Table;
+use App\Models\Application;
+use App\Models\Applications;
+use Filament\Resources\Resource;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Resources\ApplicationsResource\Pages;
+use App\Filament\Resources\ApplicationsResource\RelationManagers;
 
 class ApplicationsResource extends Resource
 {
-    protected static ?string $model = Applications::class;
+    protected static ?string $model = Application::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 

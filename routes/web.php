@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\VolunteerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,4 +25,9 @@ Route::group([], function () {
     Route::get('/recruit-volunteers', [HomeController::class, 'recruit'])->name('recruit');
     Route::get('/about', [HomeController::class, 'about'])->name('about');
     Route::get('/contact-us', [HomeController::class, 'contact'])->name('contact.us');
+    Route::resource('recruit-volunteers', VolunteerController::class);
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

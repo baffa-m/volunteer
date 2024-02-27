@@ -2,20 +2,22 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\VolunteersResource\Pages;
-use App\Filament\Resources\VolunteersResource\RelationManagers;
-use App\Models\Volunteers;
 use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Forms\Form;
+use App\Models\Volunteer;
+use App\Models\Volunteers;
 use Filament\Tables\Table;
+use Filament\Resources\Resource;
+use Filament\Tables\Columns\TextColumn;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Resources\VolunteersResource\Pages;
+use App\Filament\Resources\VolunteersResource\RelationManagers;
 
 class VolunteersResource extends Resource
 {
-    protected static ?string $model = Volunteers::class;
+    protected static ?string $model = Volunteer::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -31,7 +33,10 @@ class VolunteersResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('post_title'),
+                TextColumn::make('location'),
+                TextColumn::make('post_openings'),
+                TextColumn::make('organization_id'),
             ])
             ->filters([
                 //

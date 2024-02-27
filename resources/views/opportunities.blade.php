@@ -40,10 +40,9 @@
                                         <div class="mb-0">
                                             <select class="form-control form-select">
                                                 <option selected="">Job Types</option>
-                                                <option value="4">Accounting</option>
-                                                <option value="1">IT &amp; Software</option>
-                                                <option value="3">Marketing</option>
-                                                <option value="5">Banking</option>
+                                                @foreach ($categories as $category)
+                                                <option value="{{ $category->id }}">{{ $category->category_name }}</option>
+                                                @endforeach
                                             </select>
                                         </div>
                                     </div><!--end col-->
@@ -72,12 +71,9 @@
                         <div class="mt-4 mb-0">
                             <select class="form-select form-control" aria-label="Default select example">
                                 <option selected="">All Jobs</option>
-                                <option>Digital &amp; Creative</option>
-                                <option>Accountancy</option>
-                                <option>Banking</option>
-                                <option>IT Contractor</option>
-                                <option>Graduate</option>
-                                <option>Estate Agency</option>
+                                @foreach ($categories as $category)
+                                <option value="{{ $category->id }}">{{ $category->category_name }}</option>
+                                @endforeach
                             </select>
                         </div>
                     </div>
@@ -118,26 +114,6 @@
             </div><!--end col-->
 
             <div class="col-lg-8 col-md-6 col-12">
-                <div class="row align-items-center">
-                    <div class="col-lg-9 col-md-8">
-                        <div class="section-title">
-                            <span class="text-muted me-3">Showing 1 - 15 out of 452</span>
-                        </div>
-                    </div><!--end col-->
-
-                    <div class="col-lg-3 col-md-4 mt-4 mt-sm-0 pt-2 pt-sm-0">
-                        <div class="form custom-form">
-                            <select class="form-select form-control" aria-label="Default select example" id="Sortbylist-job">
-                                <option selected="">All Jobs</option>
-                                <option>Full Time</option>
-                                <option>Part Time</option>
-                                <option>Remote</option>
-                                <option>Work From Home</option>
-                            </select>
-                        </div>
-                    </div><!--end col-->
-                </div><!--end row-->
-
                 <div class="row">
                     <div class="col-12 mt-4 pt-2">
                         <div class="job-box job-primary d-md-flex align-items-center border-0 shadow rounded p-4 position-relative">
@@ -148,206 +124,6 @@
 
                                 <ul class="list-unstyled mb-0 mt-2">
                                     <li class="d-lg-inline text-muted h6 mb-0 me-lg-2"><i class="uil uil-map-marker icons"></i> <a href="javascript:void(0)" class="text-dark">CircleCI</a>, San Francisco</li>
-                                    <li class="d-lg-inline text-muted h6 mb-0 me-lg-2"><i class="uil uil-clock icons"></i> 8hr/ Day</li>
-                                    <li class="d-lg-inline text-muted h6 mb-0"><i class="uil uil-bill icons"></i> 30k-35k</li>
-                                </ul>
-
-                                <div class="mt-2">
-                                    <span class="badge text-bg-soft">Fulltime</span>
-                                    <span class="badge bg-soft-warning">Office</span>
-                                </div>
-                            </div>
-
-                            <div class="position-absolute top-0 end-0 mt-3 me-3">
-                                <a href="javascript:void(0)" class="btn btn-icon btn-pills btn-soft"><i class="uil uil-bookmark align-middle"></i></a>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-
-                    <div class="col-12 mt-4 pt-2">
-                        <div class="job-box job-primary d-md-flex align-items-center border-0 shadow rounded p-4 position-relative">
-                            <img src="assets/images/job/Mg.svg" class="avatar avatar-md-sm" alt="">
-
-                            <div class="ms-md-4 mt-4 mt-sm-0">
-                                <a href="job-detail-one.html" class="title text-dark h5">Web Designer</a>
-
-                                <ul class="list-unstyled mb-0 mt-2">
-                                    <li class="d-lg-inline text-muted h6 mb-0 me-lg-2"><i class="uil uil-map-marker icons"></i> <a href="javascript:void(0)" class="text-dark">MG</a>, San Francisco</li>
-                                    <li class="d-lg-inline text-muted h6 mb-0 me-lg-2"><i class="uil uil-clock icons"></i> 8hr/ Day</li>
-                                    <li class="d-lg-inline text-muted h6 mb-0"><i class="uil uil-bill icons"></i> 30k-35k</li>
-                                </ul>
-
-                                <div class="mt-2">
-                                    <span class="badge text-bg-soft">Fulltime</span>
-                                    <span class="badge bg-soft-warning">Office</span>
-                                </div>
-                            </div>
-
-                            <div class="position-absolute top-0 end-0 mt-3 me-3">
-                                <a href="javascript:void(0)" class="btn btn-icon btn-pills btn-soft"><i class="uil uil-bookmark align-middle"></i></a>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-
-                    <div class="col-12 mt-4 pt-2">
-                        <div class="job-box job-primary d-md-flex align-items-center border-0 shadow rounded p-4 position-relative">
-                            <img src="assets/images/job/Codepen.svg" class="avatar avatar-md-sm" alt="">
-
-                            <div class="ms-md-4 mt-4 mt-sm-0">
-                                <a href="job-detail-one.html" class="title text-dark h5">Web Developer</a>
-
-                                <ul class="list-unstyled mb-0 mt-2">
-                                    <li class="d-lg-inline text-muted h6 mb-0 me-lg-2"><i class="uil uil-map-marker icons"></i> <a href="javascript:void(0)" class="text-dark">Codepen</a>, San Francisco</li>
-                                    <li class="d-lg-inline text-muted h6 mb-0 me-lg-2"><i class="uil uil-clock icons"></i> 8hr/ Day</li>
-                                    <li class="d-lg-inline text-muted h6 mb-0"><i class="uil uil-bill icons"></i> 30k-35k</li>
-                                </ul>
-
-                                <div class="mt-2">
-                                    <span class="badge text-bg-soft">Fulltime</span>
-                                    <span class="badge bg-soft-warning">Office</span>
-                                </div>
-                            </div>
-
-                            <div class="position-absolute top-0 end-0 mt-3 me-3">
-                                <a href="javascript:void(0)" class="btn btn-icon btn-pills btn-soft"><i class="uil uil-bookmark align-middle"></i></a>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-
-                    <div class="col-12 mt-4 pt-2">
-                        <div class="job-box job-primary d-md-flex align-items-center border-0 shadow rounded p-4 position-relative">
-                            <img src="assets/images/job/Discord.svg" class="avatar avatar-md-sm" alt="">
-
-                            <div class="ms-md-4 mt-4 mt-sm-0">
-                                <a href="job-detail-one.html" class="title text-dark h5">Web Developer</a>
-
-                                <ul class="list-unstyled mb-0 mt-2">
-                                    <li class="d-lg-inline text-muted h6 mb-0 me-lg-2"><i class="uil uil-map-marker icons"></i> <a href="javascript:void(0)" class="text-dark">Discord</a>, San Francisco</li>
-                                    <li class="d-lg-inline text-muted h6 mb-0 me-lg-2"><i class="uil uil-clock icons"></i> 8hr/ Day</li>
-                                    <li class="d-lg-inline text-muted h6 mb-0"><i class="uil uil-bill icons"></i> 30k-35k</li>
-                                </ul>
-
-                                <div class="mt-2">
-                                    <span class="badge text-bg-soft">Fulltime</span>
-                                    <span class="badge bg-soft-warning">Office</span>
-                                </div>
-                            </div>
-
-                            <div class="position-absolute top-0 end-0 mt-3 me-3">
-                                <a href="javascript:void(0)" class="btn btn-icon btn-pills btn-soft"><i class="uil uil-bookmark align-middle"></i></a>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-
-                    <div class="col-12 mt-4 pt-2">
-                        <div class="job-box job-primary d-md-flex align-items-center border-0 shadow rounded p-4 position-relative">
-                            <img src="assets/images/job/Eslint.svg" class="avatar avatar-md-sm" alt="">
-
-                            <div class="ms-md-4 mt-4 mt-sm-0">
-                                <a href="job-detail-one.html" class="title text-dark h5">Web Developer</a>
-
-                                <ul class="list-unstyled mb-0 mt-2">
-                                    <li class="d-lg-inline text-muted h6 mb-0 me-lg-2"><i class="uil uil-map-marker icons"></i> <a href="javascript:void(0)" class="text-dark">Eslint</a>, San Francisco</li>
-                                    <li class="d-lg-inline text-muted h6 mb-0 me-lg-2"><i class="uil uil-clock icons"></i> 8hr/ Day</li>
-                                    <li class="d-lg-inline text-muted h6 mb-0"><i class="uil uil-bill icons"></i> 30k-35k</li>
-                                </ul>
-
-                                <div class="mt-2">
-                                    <span class="badge text-bg-soft">Fulltime</span>
-                                    <span class="badge bg-soft-warning">Office</span>
-                                </div>
-                            </div>
-
-                            <div class="position-absolute top-0 end-0 mt-3 me-3">
-                                <a href="javascript:void(0)" class="btn btn-icon btn-pills btn-soft"><i class="uil uil-bookmark align-middle"></i></a>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-
-                    <div class="col-12 mt-4 pt-2">
-                        <div class="job-box job-primary d-md-flex align-items-center border-0 shadow rounded p-4 position-relative">
-                            <img src="assets/images/job/Gitlab.svg" class="avatar avatar-md-sm" alt="">
-
-                            <div class="ms-md-4 mt-4 mt-sm-0">
-                                <a href="job-detail-one.html" class="title text-dark h5">Web Developer</a>
-
-                                <ul class="list-unstyled mb-0 mt-2">
-                                    <li class="d-lg-inline text-muted h6 mb-0 me-lg-2"><i class="uil uil-map-marker icons"></i> <a href="javascript:void(0)" class="text-dark">Gitlab</a>, San Francisco</li>
-                                    <li class="d-lg-inline text-muted h6 mb-0 me-lg-2"><i class="uil uil-clock icons"></i> 8hr/ Day</li>
-                                    <li class="d-lg-inline text-muted h6 mb-0"><i class="uil uil-bill icons"></i> 30k-35k</li>
-                                </ul>
-
-                                <div class="mt-2">
-                                    <span class="badge text-bg-soft">Fulltime</span>
-                                    <span class="badge bg-soft-warning">Office</span>
-                                </div>
-                            </div>
-
-                            <div class="position-absolute top-0 end-0 mt-3 me-3">
-                                <a href="javascript:void(0)" class="btn btn-icon btn-pills btn-soft"><i class="uil uil-bookmark align-middle"></i></a>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-
-                    <div class="col-12 mt-4 pt-2">
-                        <div class="job-box job-primary d-md-flex align-items-center border-0 shadow rounded p-4 position-relative">
-                            <img src="assets/images/job/Udemy.svg" class="avatar avatar-md-sm" alt="">
-
-                            <div class="ms-md-4 mt-4 mt-sm-0">
-                                <a href="job-detail-one.html" class="title text-dark h5">Web Developer</a>
-
-                                <ul class="list-unstyled mb-0 mt-2">
-                                    <li class="d-lg-inline text-muted h6 mb-0 me-lg-2"><i class="uil uil-map-marker icons"></i> <a href="javascript:void(0)" class="text-dark">Udemy</a>, San Francisco</li>
-                                    <li class="d-lg-inline text-muted h6 mb-0 me-lg-2"><i class="uil uil-clock icons"></i> 8hr/ Day</li>
-                                    <li class="d-lg-inline text-muted h6 mb-0"><i class="uil uil-bill icons"></i> 30k-35k</li>
-                                </ul>
-
-                                <div class="mt-2">
-                                    <span class="badge text-bg-soft">Fulltime</span>
-                                    <span class="badge bg-soft-warning">Office</span>
-                                </div>
-                            </div>
-
-                            <div class="position-absolute top-0 end-0 mt-3 me-3">
-                                <a href="javascript:void(0)" class="btn btn-icon btn-pills btn-soft"><i class="uil uil-bookmark align-middle"></i></a>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-
-                    <div class="col-12 mt-4 pt-2">
-                        <div class="job-box job-primary d-md-flex align-items-center border-0 shadow rounded p-4 position-relative">
-                            <img src="assets/images/job/Webhooks.svg" class="avatar avatar-md-sm" alt="">
-
-                            <div class="ms-md-4 mt-4 mt-sm-0">
-                                <a href="job-detail-one.html" class="title text-dark h5">Web Developer</a>
-
-                                <ul class="list-unstyled mb-0 mt-2">
-                                    <li class="d-lg-inline text-muted h6 mb-0 me-lg-2"><i class="uil uil-map-marker icons"></i> <a href="javascript:void(0)" class="text-dark">Webhooks</a>, San Francisco</li>
-                                    <li class="d-lg-inline text-muted h6 mb-0 me-lg-2"><i class="uil uil-clock icons"></i> 8hr/ Day</li>
-                                    <li class="d-lg-inline text-muted h6 mb-0"><i class="uil uil-bill icons"></i> 30k-35k</li>
-                                </ul>
-
-                                <div class="mt-2">
-                                    <span class="badge text-bg-soft">Fulltime</span>
-                                    <span class="badge bg-soft-warning">Office</span>
-                                </div>
-                            </div>
-
-                            <div class="position-absolute top-0 end-0 mt-3 me-3">
-                                <a href="javascript:void(0)" class="btn btn-icon btn-pills btn-soft"><i class="uil uil-bookmark align-middle"></i></a>
-                            </div>
-                        </div>
-                    </div><!--end col-->
-
-                    <div class="col-12 mt-4 pt-2">
-                        <div class="job-box job-primary d-md-flex align-items-center border-0 shadow rounded p-4 position-relative">
-                            <img src="assets/images/job/Sketch.svg" class="avatar avatar-md-sm" alt="">
-
-                            <div class="ms-md-4 mt-4 mt-sm-0">
-                                <a href="job-detail-one.html" class="title text-dark h5">Web Developer</a>
-
-                                <ul class="list-unstyled mb-0 mt-2">
-                                    <li class="d-lg-inline text-muted h6 mb-0 me-lg-2"><i class="uil uil-map-marker icons"></i> <a href="javascript:void(0)" class="text-dark">Sketch</a>, San Francisco</li>
                                     <li class="d-lg-inline text-muted h6 mb-0 me-lg-2"><i class="uil uil-clock icons"></i> 8hr/ Day</li>
                                     <li class="d-lg-inline text-muted h6 mb-0"><i class="uil uil-bill icons"></i> 30k-35k</li>
                                 </ul>

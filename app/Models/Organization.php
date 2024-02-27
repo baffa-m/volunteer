@@ -17,6 +17,7 @@ class Organization extends Model
         'about',
         'address',
         'state',
+        'avatar_path'
     ];
 
 

@@ -12,7 +12,7 @@ class VolunteerController extends Controller
      */
     public function index()
     {
-        //
+        return view('recruit.index');
     }
 
     /**
@@ -20,7 +20,7 @@ class VolunteerController extends Controller
      */
     public function create()
     {
-        //
+        return view('recruit.create');
     }
 
     /**

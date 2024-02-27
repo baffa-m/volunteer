@@ -2,12 +2,23 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
+use App\Models\State;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+
+    public function __construct()
+    {
+        view()->share('categories', Category::all());
+    }
+
+
     public function index() {
-        return view('welcome');
+        $categories = Category::all();
+        $states = State::all();
+        return view('welcome', compact('categories', 'states'));
     }
 
     public function opportunities() {

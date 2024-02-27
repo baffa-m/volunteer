@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="utf-8">
-        <title>we Volunteer</title>
+        <title>Landrick - Saas & Software Landing Page Template</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Premium Bootstrap 5 Landing Page Template">
         <meta name="keywords" content="Saas, Software, multi-uses, HTML, Clean, Modern">
@@ -57,8 +57,7 @@
                                 </div><!--end col-->
 
                                 <div class="col-lg-6 col-md-7">
-                                    <form class="login-form p-4" action="{{ route('login')}}" method="POST">
-                                        @csrf
+                                    <form class="login-form p-4">
                                         <div class="row">
                                             <div class="col-lg-12">
                                                 <div class="mb-3">
@@ -99,7 +98,7 @@
                                             </div><!--end col-->
 
                                             <div class="col-12 text-center">
-                                                <p class="mb-0 mt-3"><small class="text-dark me-2">Don't have an account ?</small> <a href="#" data-bs-toggle="modal" data-bs-target="#register-popup" class="text-dark fw-bold">Sign Up</a></p>
+                                                <p class="mb-0 mt-3"><small class="text-dark me-2">Don't have an account ?</small> <a href="auth-signup.html" class="text-dark fw-bold">Sign Up</a></p>
                                             </div><!--end col-->
                                         </div><!--end row-->
                                     </form>
@@ -110,7 +109,6 @@
                 </div>
             </div>
         </div>
-
 
         <div class="modal fade" id="register-popup" tabindex="-1" style="display: none;" aria-hidden="true">
             <div class="modal-dialog  modal-lg modal-dialog-centered">
@@ -123,28 +121,23 @@
                                 </div><!--end col-->
 
                                 <div class="col-lg-6 col-md-7">
-                                    <form class="login-form p-4" action="{{ route('register')}}" method="POST">
-                                        @csrf
+                                    <form>
+                                        <a href="index.html"><img src="assets/images/logo-icon.png" class="avatar avatar-small mb-4 d-block mx-auto" alt=""></a>
                                         <h5 class="mb-3 text-center">Register your account</h5>
 
                                         <div class="form-floating mb-2">
-                                            <input name="name" type="text" class="form-control" id="floatingInput" placeholder="Harry">
-                                            <label for="floatingInput">Name</label>
+                                            <input type="text" class="form-control" id="floatingInput" placeholder="Harry">
+                                            <label for="floatingInput">First Name</label>
                                         </div>
 
                                         <div class="form-floating mb-2">
-                                            <input name="email" type="email" class="form-control" id="floatingEmail" placeholder="name@example.com">
+                                            <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com">
                                             <label for="floatingEmail">Email Address</label>
                                         </div>
 
                                         <div class="form-floating mb-3">
-                                            <input name="password" type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
                                             <label for="floatingPassword">Password</label>
-                                        </div>
-
-                                        <div class="form-floating mb-3">
-                                            <input name="password_confirmation" type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                                            <label for="floatingPassword">Confirm Password</label>
                                         </div>
 
                                         <div class="form-check mb-3">
@@ -158,10 +151,7 @@
                                             <p class="mb-0 mt-3"><small class="text-dark me-2">Already have an account ?</small> <a href="auth-bs-login.html" class="text-dark fw-bold">Sign in</a></p>
                                         </div><!--end col-->
 
-                                        <div class="col-12 text-center mt-3">
-                                            <a href="auth-bs-login.html" class="text-dark fw-bold"><small class="text-dark me-2">Register as an Organization</small></a>
-                                        </div><!--end col-->
-
+                                        <p class="mb-0 text-muted mt-3 text-center">© <script>document.write(new Date().getFullYear())</script>2024 Landrick.</p>
                                     </form>
                                 </div><!--end col-->
                             </div><!--end row-->
