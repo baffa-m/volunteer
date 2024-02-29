@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Volunteer;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class VolunteerController extends Controller
 {
@@ -12,7 +13,9 @@ class VolunteerController extends Controller
      */
     public function index()
     {
-        return view('recruit.index');
+        $user = Auth::user();
+        $volunteer_openings = Volunteer::where('organization_id', $user->organization->id);
+        return view('recruit.index', compact('$volunteer_openings'));
     }
 
     /**
@@ -20,7 +23,7 @@ class VolunteerController extends Controller
      */
     public function create()
     {
-        return view('recruit.create');
+        return view('about');
     }
 
     /**

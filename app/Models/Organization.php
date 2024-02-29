@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Organization extends Model
@@ -29,6 +30,10 @@ class Organization extends Model
     public function state():HasOne
     {
         return $this->hasOne(State::class);
+    }
+
+    public function volunteer(): HasMany {
+        return $this->hasMany(Volunteer::class);
     }
 
 }

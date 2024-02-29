@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('location');
             $table->string('responsibilities');
             $table->integer('post_openings');
+            $table->foreignId('state_id')->references('id')->on('states')->onDelete('null');
             $table->foreignId('organization_id')->references('id')->on('organizations');
             $table->timestamps();
         });

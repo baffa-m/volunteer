@@ -36,4 +36,12 @@ class HomeController extends Controller
     public function contact() {
         return view('contact us');
     }
+
+    public function registerOrganization() {
+        return view('auth.register_as_organization');
+    }
+
+    public function test() {
+        return view('recruit.create');
+    }
 }
