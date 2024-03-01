@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Organization;
 use App\Models\Volunteer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -14,8 +15,9 @@ class VolunteerController extends Controller
     public function index()
     {
         $user = Auth::user();
-        $volunteer_openings = Volunteer::where('organization_id', $user->organization->id);
-        return view('recruit.index', compact('$volunteer_openings'));
+        $organization = Organization::where('user_id', $user->id)->first();
+        $volunteer_openings = Volunteer::where('organization_id', $organization->id)->get(); // Fetch volunteer openings
+        return view('recruit.index', compact('volunteer_openings'));
     }
 
     /**

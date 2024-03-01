@@ -1,16 +1,7 @@
 <!-- Navbar Start -->
 <header id="topnav" class="defaultscroll sticky">
     <div class="container">
-        <!-- Logo container-->
-        <a class="logo" href="index.html">
-            <span class="logo-light-mode">
-                <img src="assets/images/logo-dark.png" class="l-dark" height="24" alt="">
-                <img src="assets/images/logo-light.png" class="l-light" height="24" alt="">
-            </span>
-            <img src="assets/images/logo-light.png" height="24" class="logo-dark-mode" alt="">
-        </a>
 
-        <!-- End Logo container-->
         <div class="menu-extras">
             <div class="menu-item">
                 <!-- Mobile menu toggle-->
@@ -46,7 +37,9 @@
                 <li><a href="{{ route('recruit.index') }}" class="sub-menu-item">Recruit Volunteers</a></li>
                 <li><a href="{{ route('about') }}" class="sub-menu-item">About Us </a></li>
                 <li><a href="{{ route('contact.us') }}" class="sub-menu-item">Contact us</a></li>
+                @guest
                 <li><a href="#" class="sub-menu-item">Sign Up</a></li>
+                @endguest
             </ul><!--end navigation menu-->
         </div><!--end navigation-->
     </div><!--end container-->

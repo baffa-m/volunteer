@@ -9,6 +9,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Volunteer extends Model
 {
+
+    protected $table = 'volunteer_events';
+
     use HasFactory;
 
     protected $fillable = [

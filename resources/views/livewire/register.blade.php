@@ -1,6 +1,6 @@
-<div>
+<div wire:ignore.self>
     {{-- To attain knowledge, add things every day; To attain wisdom, subtract things every day. --}}
-    <div class="modal fade" id="register-popup" tabindex="-1" style="display: none;" aria-hidden="true">
+    <div wire:ignore.self class="modal fade" id="register-popup" tabindex="-1" style="display: none;" aria-hidden="true">
         <div class="modal-dialog  modal-lg modal-dialog-centered">
             <div class="modal-content rounded shadow border-0">
                 <div class="modal-body p-0">
@@ -11,32 +11,47 @@
                             </div><!--end col-->
 
                             <div class="col-lg-6 col-md-7">
-                                <form class="login-form p-4" action="{{ route('register')}}" method="POST">
+                                <form class="login-form p-4" wire:submit.prevent="submitForm">
                                     @csrf
                                     <h5 class="mb-3 text-center">Register your account</h5>
 
                                     <div class="form-floating mb-2">
-                                        <input name="name" type="text" class="form-control" id="floatingInput" placeholder="Harry">
+                                        <input name="name" wire:model.defer="name" type="text" class="form-control" id="floatingInput" placeholder="Harry">
                                         <label for="floatingInput">Name</label>
+                                        @error('name')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
                                     </div>
 
                                     <div class="form-floating mb-2">
-                                        <input name="email" type="email" class="form-control" id="floatingEmail" placeholder="name@example.com">
+                                        <input name="email" wire:model.defer="email" type="email" class="form-control" id="floatingEmail" placeholder="name@example.com">
                                         <label for="floatingEmail">Email Address</label>
+                                        @error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
                                     </div>
 
                                     <div class="form-floating mb-3">
-                                        <input name="password" type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                                        <input name="password" wire:model.defer="password" type="password" class="form-control" id="floatingPassword" placeholder="Password">
                                         <label for="floatingPassword">Password</label>
+                                        @error('password')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
                                     </div>
 
                                     <div class="form-floating mb-3">
-                                        <input name="password_confirmation" type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                                        <input wire:model.defer="password_confirmation" name="password_confirmation" type="password" class="form-control" id="floatingPassword" placeholder="Password">
                                         <label for="floatingPassword">Confirm Password</label>
                                     </div>
 
                                     <div class="form-check mb-3">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <input wire:model.defer="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                         <label class="form-check-label" for="flexCheckDefault">I Accept <a href="#" class="text-primary">Terms And Condition</a></label>
                                     </div>
 

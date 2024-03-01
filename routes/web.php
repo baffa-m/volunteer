@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\OrganizationController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\VolunteerController;
 use Illuminate\Support\Facades\Route;
 
@@ -28,6 +30,11 @@ Route::group([], function () {
     Route::get('register-organization', [HomeController::class, 'registerOrganization'])->name('register.organization');
     Route::resource('recruit', VolunteerController::class);
     Route::get('test', [HomeController::class, 'test']);
+    Route::get('profile', [ProfileController::class, 'create'])->name('profile');
+    Route::post('profile', [ProfileController::class, 'store']);
+
+    Route::get('organization', [OrganizationController::class, 'create'])->name('organization');
+    Route::post('organization', [OrganizationController::class, 'store']);
 });
 
 Auth::routes();

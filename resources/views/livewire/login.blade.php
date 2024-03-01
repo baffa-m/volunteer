@@ -21,7 +21,6 @@
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user fea icon-sm icons"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
                                                     <input id="email" type="email" class="form-control ps-5 @error('email') is-invalid @enderror" wire:model.defer="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                                                     @error('email')
-                                                    <h1></h1>
                                                         <span class="invalid-feedback" role="alert">
                                                             <strong>{{ $message }}</strong>
                                                         </span>
@@ -38,7 +37,6 @@
                                                     <input id="password" type="password" class="form-control ps-5 @error('password') is-invalid @enderror" wire:model.defer="password" required autocomplete="current-password">
                                                     @error('password')
                                                     <span class="invalid-feedback" role="alert">
-                                                        <h1>jfjffj</h1>
                                                         <strong>{{ $message }}</strong>
                                                     </span>
                                                     @enderror

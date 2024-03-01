@@ -73,7 +73,12 @@
         <script>
             easy_background("#home",
                 {
-                    slide: ["assets/images/real/1.jpg", "assets/images/real/2.jpg", "assets/images/real/3.jpg"],
+                    slide: ["assets/images/volunteer/1.jpg", "assets/images/volunteer/2.jpg", "assets/images/volunteer/3.jpg",
+                    "assets/images/volunteer/4.jpg", "assets/images/volunteer/5.jpg", "assets/images/volunteer/6.jpg",
+                    "assets/images/volunteer/7.jpg", "assets/images/volunteer/8.jpg", "assets/images/volunteer/9.jpg",
+                    "assets/images/volunteer/10.jpg", "assets/images/volunteer/11.jpg", "assets/images/volunteer/12.jpg",
+                    "assets/images/volunteer/13.jpg"
+                    ],
                     delay: [4000, 4000, 4000]
                 }
             );

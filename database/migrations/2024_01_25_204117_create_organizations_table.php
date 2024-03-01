@@ -15,10 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('email');
             $table->string('org_name')->index();
-            $table->string('about');
-            $table->string('what we do');
+            $table->text('about');
             $table->string('address');
-            $table->string('contact_phone');
 
             $table->foreignId('state_id')->references('id')->on('states')->onDelete('cascade');
             $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
