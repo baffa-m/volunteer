@@ -17,13 +17,13 @@
         <link rel="shortcut icon" href="assets/images/favicon.ico">
 
         <!-- Bootstrap Css -->
-        <link href="assets/css/bootstrap-green.min.css" id="bootstrap-style" class="theme-opt" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('assets/css/bootstrap-green.min.css') }}" id="bootstrap-style" class="theme-opt" rel="stylesheet" type="text/css" />
         <!-- Icons Css -->
-        <link href="assets/libs/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
-        <link href="assets/libs/@iconscout/unicons/css/line.css" type="text/css" rel="stylesheet" />
+        <link href="{{ asset('assets/libs/@mdi/font/css/materialdesignicons.min.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('assets/libs/@iconscout/unicons/css/line.css') }}" type="text/css" rel="stylesheet" />
         <!-- Style Css-->
-        <link href="assets/libs/tiny-slider/tiny-slider.css" rel="stylesheet">
-        <link href="assets/css/style-green.min.css" id="color-opt" class="theme-opt" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('assets/libs/tiny-slider/tiny-slider.css') }}" rel="stylesheet">
+        <link href="{{ asset('assets/css/style-green.min.css') }}" id="color-opt" class="theme-opt" rel="stylesheet" type="text/css" />
         @livewireStyles
 
     </head>
@@ -58,14 +58,14 @@
 
         <!-- javascript -->
         <!-- JAVASCRIPT -->
-        <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="{{ asset('assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
         <!-- SLIDER -->
-        <script src="assets/libs/tiny-slider/min/tiny-slider.js"></script>
-        <script src="assets/js/easy_background.js"></script>
+        <script src="{{ asset('assets/libs/tiny-slider/min/tiny-slider.js') }}"></script>
+        <script src="{{ asset('assets/js/easy_background.js') }}"></script>
         <!-- Main Js -->
-        <script src="assets/libs/feather-icons/feather.min.js"></script>
-        <script src="assets/js/plugins.init.js"></script><!--Note: All init js like tiny slider, counter, countdown, maintenance, lightbox, gallery, swiper slider, aos animation etc.-->
-        <script src="assets/js/app.js"></script><!--Note: All important javascript like page loader, menu, sticky menu, menu-toggler, one page menu etc. -->
+        <script src="{{ asset('assets/libs/feather-icons/feather.min.js') }}"></script>
+        <script src="{{ asset('assets/js/plugins.init.js') }}"></script><!--Note: All init js like tiny slider, counter, countdown, maintenance, lightbox, gallery, swiper slider, aos animation etc.-->
+        <script src="{{ asset('assets/js/app.js') }}"></script><!--Note: All important javascript like page loader, menu, sticky menu, menu-toggler, one page menu etc. -->
 
         @livewireScripts
         @stack('scripts')

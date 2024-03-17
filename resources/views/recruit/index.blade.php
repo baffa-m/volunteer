@@ -9,7 +9,7 @@
         <div class="container-fluid">
             <div class="layout-specing">
                 <div class="d-md-flex justify-content-between align-items-center">
-                    <h5 class="mb-0">Organization</h5>
+                    <h5 class="mb-0">{{ auth()->user()->organization->org_name }}</h5>
                 </div>
 
                 <div class="row">
@@ -28,6 +28,7 @@
                                                     <option value="5">Banking</option>
                                                 </select>
                                             </div>
+                                            <a href="{{ route('recruit.create')}}" class="">Create New</a>
                                         </div><!--end col-->
                                     </div><!--end row-->
                                 </div> <!---end col-->

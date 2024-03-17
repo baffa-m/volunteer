@@ -18,8 +18,10 @@ class Volunteer extends Model
         'post_title',
         'description',
         'location',
-        'post_openings',
-        'category'
+        'category_id',
+        'responsibilities',
+        'state_id',
+        'organization_id',
     ];
 
 

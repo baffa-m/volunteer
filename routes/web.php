@@ -28,13 +28,17 @@ Route::group([], function () {
     Route::get('/about', [HomeController::class, 'about'])->name('about');
     Route::get('/contact-us', [HomeController::class, 'contact'])->name('contact.us');
     Route::get('register-organization', [HomeController::class, 'registerOrganization'])->name('register.organization');
-    Route::resource('recruit', VolunteerController::class);
     Route::get('test', [HomeController::class, 'test']);
     Route::get('profile', [ProfileController::class, 'create'])->name('profile');
     Route::post('profile', [ProfileController::class, 'store']);
 
     Route::get('organization', [OrganizationController::class, 'create'])->name('organization');
     Route::post('organization', [OrganizationController::class, 'store']);
+
+
+    // Recruit
+    Route::resource('recruit', VolunteerController::class);
+
 });
 
 Auth::routes();
