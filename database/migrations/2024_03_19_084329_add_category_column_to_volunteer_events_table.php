@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::table('volunteer_events', function (Blueprint $table) {
             $table->foreignId('category_id')->references('id')->on('categories')->onDelete('cascade');
-
         });
     }
 
@@ -23,7 +22,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('volunteer_events', function (Blueprint $table) {
-            $table->dropColumn('category_id');
+            //
         });
     }
 };
