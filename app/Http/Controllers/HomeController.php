@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\State;
+use App\Models\Volunteer;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -18,7 +19,8 @@ class HomeController extends Controller
     public function index() {
         $categories = Category::all();
         $states = State::all();
-        return view('welcome', compact('categories', 'states'));
+        $latest_volunteers = Volunteer::latest()->take(12)->get();
+        return view('welcome', compact('categories', 'states', 'latest_volunteers'));
     }
 
     public function opportunities() {

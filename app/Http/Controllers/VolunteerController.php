@@ -54,9 +54,10 @@ class VolunteerController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Volunteer $volunteer)
+    public function show($id)
     {
-        //
+        $volunteer = Volunteer::findOrFail($id);
+        return view('opportunities.show', compact('volunteer'));
     }
 
     /**
